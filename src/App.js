@@ -3,6 +3,7 @@ import './App.css';
 import {Escena} from './components/escena/escena.js';
 import {quotes} from './info/frases.js'
 import {Botones} from './components/botones/botones'
+import {Fondo} from './components/globalStyles/imgFondo'
 
 function App() {
 
@@ -14,8 +15,9 @@ function App() {
   
   return (
    <div className="App">
+    <Fondo quotes={quotes} selected={selected}/>
     <Botones next={next} previous={previous}/>
-    {quotes.map((item) => (<Escena id={item.id} frase={item.frase} isSelected={item.id === selected}/>))}
+    {quotes.map((item) => (<Escena id={item.id} txt={item.txt} isSelected={item.id === selected}/>))}
     </div>
   );
 }

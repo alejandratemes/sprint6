@@ -6,6 +6,7 @@ export const Borde = styled.div`
     border: 0.2em solid #000;
     border-radius: 30rem;
     margin: 1em;
+    background-color: rgba(255,255,255, 0.7);
 
     &.fonsActiu {
         background-color: #FFC0CB;
